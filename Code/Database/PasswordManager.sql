@@ -2,7 +2,7 @@ Create Database PasswordManager;
 Use PasswordManager;
 
 Create Table Users(
-    User_ID int Primary Key,
+    User_ID int Primary Key AUTO_INCREMENT,
     Name varchar(255) not null,
     VorName varchar(255) not null,
     MasterPassword text not null,
@@ -10,7 +10,7 @@ Create Table Users(
 );
 
 Create Table Passwords(
-    Password_ID int Primary Key,
+    Password_ID int Primary Key  AUTO_INCREMENT,
     Name varchar(255) not null,
     password text not null,
     User_ID int, FOREIGN KEY (User_ID) REFERENCES Users(User_ID)
